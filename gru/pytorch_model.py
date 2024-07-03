@@ -49,7 +49,6 @@ def train(model, dataloader):
         print(f'Epoch: {epoch+1}, Loss: {train_loss/len(dataloader):.6f}')
 
     print('training complete')
-    return model
 
 
 def get_parameters(model):
