@@ -24,8 +24,8 @@ y = np.random.randint(output_size, size=(num_samples, seq_length)).astype(np.int
 
 def get_model():
     inputs = Input(shape=(seq_length, input_size))
-    gru_out = SimpleRNN(hidden_size, return_sequences=True)(inputs)
-    outputs = Dense(output_size, activation="softmax")(gru_out)
+    rnn_out = SimpleRNN(hidden_size, return_sequences=True)(inputs)
+    outputs = Dense(output_size, activation="softmax")(rnn_out)
     model = Model(inputs, outputs)
 
     return model
